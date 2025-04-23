@@ -1,10 +1,10 @@
-# ✨ 3D Portfolio - [Your Name]
+# ✨ 3D Portfolio - [Ankit Kumar]
 
 
 *A stunning 3D portfolio built with React Three Fiber and modern web tech.*
 
 ## 🚀 Live Demo
-[View Live Deployment](https://your-portfolio-url.com)  
+https://portfolio-jvpe4r39j-ankit-kumars-projects-332b8826.vercel.app/  
 
 ## 🔧 Technologies Used
 - **Frontend**: React, React Three Fiber (R3F), Three.js  
@@ -21,4 +21,4 @@
 ## 🛠️ Setup & Installation
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
+   git clonehttps://github.com/Ankii07/Portfolio.git
