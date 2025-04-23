@@ -48,7 +48,7 @@ const Hero = () => {
               <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
               </Float>
             </HeroCamera>
-            <Sparkles
+            {/* <Sparkles
                 count={300}
                 size={10}
                 speed={0.3}
@@ -61,7 +61,7 @@ const Hero = () => {
       
                 autorotateSpeed={5} // Speed of rotation
 
-              />
+              /> */}
 
             <group>
               <Target position={sizes.targetPosition} />

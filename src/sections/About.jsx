@@ -6,7 +6,6 @@ import Button from '../components/Button.jsx';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sparkles } from '@react-three/drei';
 import CanvasLoader from '../components/Loading.jsx';
-
 import Earth from '../sections/Earth.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
 import { Float } from '@react-three/drei';
@@ -36,7 +35,7 @@ const About = () => {
   return (
     <section className="c-space my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-            <div className='absolute top-0 left-50 w-full h-full -z-1'>
+            <div className='absolute top-0 left-50 w-full h-full -z-10'>
               <Canvas >
                 <Sparkles
                   count={5000}
@@ -129,6 +128,7 @@ const About = () => {
 
                 {/* 3D Content wrapped in Suspense */}
                 <Suspense fallback={<CanvasLoader />}>
+              
                   <Float
                     speed={2} // Animation speed
                     rotationIntensity={1} // XYZ rotation intensity
@@ -203,7 +203,7 @@ const About = () => {
                   <directionalLight position={[0, -5, -5]} intensity={3} color="#ffaa00" />
                   {/* Controls */}
                   <OrbitControls
-                    enableZoom={true} // Allow zoom for better inspection
+                    enableZoom={false} // Allow zoom for better inspection
                     maxPolarAngle={Math.PI / 2}
                     autoRotate
                     autoRotateSpeed={2.5}

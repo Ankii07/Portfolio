@@ -29,13 +29,20 @@ const Projects = () => {
 
   const currentProject = myProjects[selectedProjectIndex];
 
+  const handleSocialClick = (platform) => (e) => {
+    e.stopPropagation();
+    console.log(`Clicked ${platform}`);
+
+    // Optional: Add analytics tracking here
+  };
+
   return (
     <section className="c-space my-20">
       <p className="head-text">My Selected Work</p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
       
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 shadow-xl shadow-sky-400/25">
+        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 shadow-xl shadow-sky-400/25" onClick={handleSocialClick("GitHub")}>
           <div className="absolute top-0 right-0">
             <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
           </div>
@@ -95,7 +102,7 @@ const Projects = () => {
               </Suspense>
             </Center>
             <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-            <Sparkles
+            {/* <Sparkles
               count={300}
               size={4}
               speed={0.3}
@@ -104,7 +111,7 @@ const Projects = () => {
               position={[0, 0, 0]}
               depthTest={false}
               noise={0.5} // Adds natural randomness
-            />
+            /> */}
           </Canvas>
         </div>
       </div>
