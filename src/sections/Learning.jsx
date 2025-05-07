@@ -40,7 +40,7 @@ const Clients = () => {
     }, { scope: containerRef });
 
     return (
-        <section className="c-space my-20" ref={containerRef}>
+        <section className="c-space my-20 section" ref={containerRef} id='learning'>
             <h3 className="head-text">My Learning Journey</h3>
 
             <div className="client-container" >

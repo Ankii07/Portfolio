@@ -24,7 +24,7 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-    <section className="min-h-screen w-full flex flex-col relative" id="home">
+    <section className="min-h-screen w-full flex flex-col relative section" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
           Hi, I am Ankit <span className="waving-hand">👋</span>
@@ -48,20 +48,7 @@ const Hero = () => {
               <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
               </Float>
             </HeroCamera>
-            {/* <Sparkles
-                count={300}
-                size={10}
-                speed={0.3}
-                color="white"
-                scale={[20, 20, 20]}
-                position={[0, 0, 0]}
-                depthTest={false}
-                noise={0.5} // Adds natural randomness
-                autorotate={true} // Makes the sparkles rotate around the camera
-      
-                autorotateSpeed={5} // Speed of rotation
-
-              /> */}
+          
 
             <group>
               <Target position={sizes.targetPosition} />

@@ -9,8 +9,10 @@ import CanvasLoader from '../components/Loading.jsx';
 import Earth from '../sections/Earth.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
 import { Float } from '@react-three/drei';
-
+import Astronaut from './Astronaut.jsx';
+import { useMediaQuery } from 'react-responsive';
 const About = () => {
+    const isDesktop = useMediaQuery({ minWidth: 1024});
   const [hasCopied, setHasCopied] = useState(false);
   const [rotationSpeed, setRotationSpeed] = useState(0.1);
 
@@ -33,7 +35,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="c-space my-20" id="about">
+    <section className="c-space my-20 section" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
             <div className='absolute top-0 left-50 w-full h-full -z-10'>
               <Canvas >
@@ -48,7 +50,9 @@ const About = () => {
                   noise={0.5} // Adds natural randomness
                 />
               </Canvas>
+              {isDesktop && <Astronaut/>}
             </div>
+
         <div className="col-span-1 xl:row-span-3 shadow-xl shadow-sky-400/25 z-10">
           <div className="grid-container">
             {/* <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" /> */}
@@ -113,9 +117,9 @@ const About = () => {
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center work-canvas">
               <Canvas>
                 {/* Lights - no whitespace between them */}
-                <directionalLight position={[5, 5, 5]} intensity={3} castShadow />
-                <directionalLight position={[-5, 3, 2]} intensity={3} color="#00aaff" />
-                <directionalLight position={[0, -5, -5]} intensity={3} color="#ffaa00" />
+                <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
+                <directionalLight position={[-5, 3, 2]} intensity={1} color="#00aaff" />
+                <directionalLight position={[0, -5, -5]} intensity={1} color="#ffaa00" />
 
                 {/* Controls - directly after lights */}
                 <OrbitControls
