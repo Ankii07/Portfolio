@@ -104,7 +104,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I am Ankit</p>
               <p className="grid-subtext">
-                Skilled in frontend and backend development, I’ve built responsive websites using modern frameworks.
+                Skilled in frontend development, I’ve built responsive websites using modern frameworks.
                 Through hands-on projects and continuous learning, I deliver clean, user-friendly web applications.
                 Excited to grow my expertise in a professional environment.
               </p>
